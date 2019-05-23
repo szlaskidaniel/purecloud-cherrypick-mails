@@ -119,10 +119,11 @@ angular.module('kiwi')
                 // Assign mail body to global $scope variable
                 $scope.EmailObj = resp;
                 console.log(resp);
-                $scope.EmailBody = resp;
+          
                 // Check if we've HTML Body
                 if (resp.htmlBody !== undefined) {
                     $scope.bHTMLBody = true;
+                    $scope.EmailBody = resp.htmlBody;
                     // Check if we've got Images
                     if (resp.attachments !== undefined && resp.attachments.length > 0) {
                         //$scope.bShowImages = true;
