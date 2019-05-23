@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- This library is to enable Promises at IE browsers -->
+    <script type="text/javascript">
+        if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+            document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"><\/script>');
+    </script>
+
+</head>
+
+<body ng-app="kiwi">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- loading panel -->
+    <div id="loading-panel" ng-show="loading" class="ng-cloak">
+    </div>
+    <div id="loading-panel-box" ng-show="loading" class="ng-cloak">
+        <h3>Please wait</h3>
+        <img src="..\images\loader.gif" />
+        <h5>Do not refresh the page</h5>
+    </div>
+    <!-- /loading panel -->
+
+    <!-- nav bar -->
+    <div class="ng-cloak" ng-hide="totallyBusy" ng-cloak>
+        <!-- nav bar when user is not logged in -->
+        <div class="navbar navbar-default" role="navigation" ng-hide="loggedInFlag" ng-cloak>
+            <div class="container">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li><a ng-href="#/"><span class="glyphicon glyphicon-home"></span></a></li>
+                        <!-- <li><a ng-href="#/config">Configuration</a></li> -->
+                    </ul>
+                </div>
+                <form class="navbar-form navbar-right">
+                    <button id="btnLogin" class="btn btn-success" type="button" ng-click="signIn()">Log in <span
+                            class="glyphicon glyphicon-log-in"></span></button>
+                </form>
+            </div>
+        </div>
+        <!-- /nav bar when user is not logged in -->
+        <!-- nav bar when user is logged in -->
+        <div class="navbar navbar-default" role="navigation" ng-show="loggedInFlag" ng-cloak>
+            <div class="container">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li><a ng-href="#/"><span class="glyphicon glyphicon-home"></span></a></li>
+                        <!-- <li><a ng-href="#/createContactList">Create contact list</a></li> -->
+                        <li><a ng-href="#/mails">eMails</a></li>
+                        <!-- <li><a ng-href="#/generateFakes">Generate fake rows</a></li> -->
+                    </ul>
+                </div>
+                <form class="navbar-form navbar-right">
+                    <button class="btn btn-default" type="button" ng-click="signOff()">Log out <span
+                            class="glyphicon glyphicon-log-out"></span></button>
+                </form>
+            </div>
+        </div>
+        <!-- /nav bar when user is logged in -->
+    </div>
+    <!-- /nav bar -->
+
+    <div class="container">
+        <div ng-view=""></div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer ng-cloak" ng-hide="totallyBusy" ng-cloak>
+        <!-- footer when user is logged off -->
+        <div class="container ng-cloak" ng-hide="loggedInFlag" ng-cloak>
+            <p><span class="glyphicon glyphicon-remove-circle"></span> You aren't logged in yet</p>
+        </div>
+        <!-- /footer when user is logged off -->
+        <!-- footer when user is logged in -->
+        <div class="container ng-cloak" ng-show="loggedInFlag" ng-cloak>
+            <p><span class="glyphicon glyphicon-user"></span> You are logged in as {{currentUserName}}</p>
+        </div>
+        <!-- /footer when user is logged in -->
+    </div>
+    <!-- /footer -->
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+    <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+    <script src="bower_components/angular-toArrayFilter/toArrayFilter.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/global.js"></script>
+    <script src="scripts/services/pcSessionService.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/signIn.js"></script>
+    <script src="scripts/controllers/config.js"></script>
+    <script src="scripts/controllers/token.js"></script>
+    <script src="scripts/controllers/mails.js"></script>
+    <!-- endbuild -->
+    <script src="https://sdk-cdn.mypurecloud.com/javascript/0.51.1/purecloud-api.min.js"></script>
+
+    <script>$('#btnLogin').trigger('click')</script>
+</body>
+
+</html>
