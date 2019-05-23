@@ -16,8 +16,8 @@ Next steps:
 * save & refresh your settings
 
 ## misc
-This solution is not meant to be installed on PRD env. It's just POC that CherryPicking mail interactions is possible via custom API usage
-Only untouched email interactions are visible via this solution.
+This solution is not meant to be installed on PRD env. \It's just POC that CherryPicking mail interactions is possible via custom API usage
+Only untouched email interactions are visible via this solution.\
 Images (attachments) are not scaled, so bigger could go beyond frame with preview window.
 
 
