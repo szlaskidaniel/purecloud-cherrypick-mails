@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name kiwi
+ * @name custom
  * @description
- * # kiwi
+ * # custom
  *
  * Main module of the application.
  */
 angular
-    .module('kiwi', [
+    .module('custom', [
         'ngAnimate',
         'ngAria',
         'ngCookies',

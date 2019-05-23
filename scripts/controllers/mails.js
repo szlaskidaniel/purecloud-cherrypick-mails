@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name kiwi.controller:EditcontactlistCtrl
+ * @name custom.controller:EditcontactlistCtrl
  * @description
  * # EditcontactlistCtrl
- * Controller of the kiwi
+ * Controller of the custom
  */
 
-angular.module('kiwi')
+angular.module('custom')
     .controller('MailsCtrl', function($q, $scope, $rootScope, $location, $timeout, $http, pcSessionService, $sce) {
 
         // <exit if not logged in>

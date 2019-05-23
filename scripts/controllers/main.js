@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name kiwi.controller:MainCtrl
+ * @name custom.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the kiwi
+ * Controller of the custom
  */
-angular.module('kiwi')
+angular.module('custom')
     .controller('MainCtrl', function($scope, $rootScope, $location, pcSessionService, $cookies) {
 
         //*** Test AREA */

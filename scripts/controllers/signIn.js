@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name kiwi.controller:SignInCtrl
+ * @name custom.controller:SignInCtrl
  * @description
  * # SignInCtrl
- * Controller of the kiwi
+ * Controller of the custom
  */
-angular.module('kiwi')
+angular.module('custom')
     .controller('SignInCtrl', function($scope, $rootScope, pcSessionService) {
 
         $rootScope.totallyBusy = true;

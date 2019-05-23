@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name kiwi.controller:ConfigCtrl
+ * @name custom.controller:ConfigCtrl
  * @description
  * # ConfigCtrl
- * Controller of the kiwi
+ * Controller of the custom
  */
-angular.module('kiwi')
+angular.module('custom')
     .controller('ConfigCtrl', function($scope, $rootScope, $location) {
 
         // <exit if legged in>

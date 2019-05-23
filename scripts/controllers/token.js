@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name kiwi.controller:TokenCtrl
+ * @name custom.controller:TokenCtrl
  * @description
  * # TokenCtrl
- * Controller of the kiwi
+ * Controller of the custom
  */
-angular.module('kiwi')
+angular.module('custom')
     .controller('TokenCtrl', function($scope, $rootScope, $location) {
 
         $rootScope.totallyBusy = true;
