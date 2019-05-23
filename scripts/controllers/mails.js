@@ -119,6 +119,7 @@ angular.module('kiwi')
                 // Assign mail body to global $scope variable
                 $scope.EmailObj = resp;
                 console.log(resp);
+                $scope.EmailBody = resp;
                 // Check if we've HTML Body
                 if (resp.htmlBody !== undefined) {
                     $scope.bHTMLBody = true;
