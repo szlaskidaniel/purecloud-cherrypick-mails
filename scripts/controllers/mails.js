@@ -124,7 +124,6 @@ angular.module('kiwi')
                 if (resp.htmlBody !== undefined) {
                     $scope.bHTMLBody = true;
                     $scope.EmailBody = $sce.trustAsHtml(resp.htmlBody);
-                    alert(resp.htmlBody);
                     // Check if we've got Images
                     if (resp.attachments !== undefined && resp.attachments.length > 0) {
                         //$scope.bShowImages = true;
