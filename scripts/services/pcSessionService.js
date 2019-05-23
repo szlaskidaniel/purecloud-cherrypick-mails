@@ -76,7 +76,7 @@ angular.module('pcSessionService', [])
 
                 var popupUrl = '#/signIn';
                 $rootScope.loading = true;
-                var popup = window.open(popupUrl, 'Sign In', "width=6,height=5,top=100,left=100,toolbar=no,scrollbars=no,resizable=no");
+                var popup = window.open(popupUrl, 'Sign In', "width=600,height=500,top=100,left=100,toolbar=no,scrollbars=no,resizable=no");
 
                 var popupMonitor = setInterval(function() {
                     if (popup.closed) {
