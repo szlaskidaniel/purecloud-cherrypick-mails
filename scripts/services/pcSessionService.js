@@ -56,11 +56,11 @@ angular.module('pcSessionService', [])
             // * END UNIT TESTS
 
             setToken: function(newToken) {
-                localStorage.setItem("kiwi_accessToken", newToken);
+                localStorage.setItem("custom_accessToken", newToken);
             },
 
             getToken: function() {
-                return localStorage.kiwi_accessToken;
+                return localStorage.custom_accessToken;
             },
 
 
@@ -76,7 +76,7 @@ angular.module('pcSessionService', [])
 
                 var popupUrl = '#/signIn';
                 $rootScope.loading = true;
-                var popup = window.open(popupUrl, 'Sign In', "width=600,height=500,top=100,left=100,toolbar=no,scrollbars=no,resizable=no");
+                var popup = window.open(popupUrl, 'Sign In', "width=6,height=5,top=100,left=100,toolbar=no,scrollbars=no,resizable=no");
 
                 var popupMonitor = setInterval(function() {
                     if (popup.closed) {
@@ -88,8 +88,7 @@ angular.module('pcSessionService', [])
             },
 
             signOff: function() {
-                //var environment = localStorage.getItem('kiwi_environment');
-                //var clientId = localStorage.getItem('kiwi_clientId');
+       
                 var environment = globalEnvironment;
                 var clientId = globalClientId;
 

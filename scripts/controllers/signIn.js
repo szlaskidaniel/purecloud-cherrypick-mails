@@ -13,9 +13,6 @@ angular.module('kiwi')
         $rootScope.totallyBusy = true;
         $rootScope.loading = false;
 
-        //var environment = localStorage.getItem('kiwi_environment');
-        //var clientId = localStorage.getItem('kiwi_clientId');
-
         var environment = globalEnvironment;
         var clientId = globalClientId;
 

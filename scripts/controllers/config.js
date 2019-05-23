@@ -16,12 +16,12 @@ angular.module('kiwi')
         }
         // </exit if legged in>
 
-        $scope.environment = localStorage.getItem('kiwi_environment');
-        $scope.clientId = localStorage.getItem('kiwi_clientId');
+        $scope.environment = localStorage.getItem('custom_environment');
+        $scope.clientId = localStorage.getItem('custom_clientId');
 
         $scope.onConfigChange = function() {
-            localStorage.setItem('kiwi_environment', $scope.environment);
-            localStorage.setItem('kiwi_clientId', $scope.clientId);
+            localStorage.setItem('custom_environment', $scope.environment);
+            localStorage.setItem('custom_clientId', $scope.clientId);
         };
 
     });
