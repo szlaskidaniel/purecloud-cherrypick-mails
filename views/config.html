@@ -1,0 +1,40 @@
+<h1 class="centred">Configuration</h1>
+
+<div class="container">
+    <div class="input-group">
+        <div class="input-group-addon">Environment</div>
+        <input type="text" class="form-control" id="environment" ng-model="environment" ng-bind="environment" ng-change="onConfigChange()">
+    </div>
+    <div class="input-group">
+        <div class="input-group-addon">Client ID</div>
+        <input type="text" class="form-control" id="clientId" ng-model="clientId" ng-bind="clientId" ng-change="onConfigChange()">
+    </div>
+</div>
+
+<br/>
+<hr/><br/>
+
+<div class="container left">
+    <h1>Configuration guide</h1>
+    <h3>Environment</h3>
+    <p>Enter to the <i>Environment</i> field the base URL of your PureCloud region, e.g. <i>mypurecloud.ie</i> for Europe.</p>
+
+    <h3>Client ID</h3>
+    <p>
+        Follow below administrative steps to configure a new oAuth application:</p>
+    <p>
+        <ul>
+            <li>Login to the PureCloud using administrative credentials.</li>
+            <li>Navigate to: Admin -> Integrations -> OAuth.</li>
+            <li>Click <i>Add Client</i> button.</li>
+            <li>Enter following settings:</li>
+            <ul>
+                <li>App Name: <i>Colima</i></li>
+                <li>Grant Types: <i>Token Implicit Grant (Browser)</i></li>
+                <li>Authorized redirect URIs: <i>http://localhost:9000/</i>
+                    <br>(or other valid URI in case if you’re hosting the application on different server)</li>
+            </ul>
+            <li>Click <i>Save</i> button.</li>
+            <li>Copy a new generated <i>Client ID</i> and paste it into the <i>Client ID</i> field on this page.</li>
+        </ul>
+</div>
